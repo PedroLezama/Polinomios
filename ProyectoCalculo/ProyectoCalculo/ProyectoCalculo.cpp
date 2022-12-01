@@ -53,9 +53,8 @@ void main()
 			for (int t=0;t<numerocoeficientes;t++)
 			{
 				poliresultado2[t] = coeficientes[t] *(coeficientes2[t]);
-
+				printf("\n%f", &poliresultado2[t]);
 			}
-
 		//}
 
 	}
