@@ -10,7 +10,7 @@ void main()
 	int coeficientes2[20];
 	int x;
 	float poliresultado;
-	int poliresultado2[50];
+	float poliresultado2[50];
 	int poliresultado3[50];
 	int opcion,i;
 
@@ -52,8 +52,8 @@ void main()
 		//{
 			for (int t=0;t<numerocoeficientes;t++)
 			{
-				poliresultado2[t] = poliresultado2[t] + coeficientes[t] *coeficientes2[t];
-				printf("%d \n", &poliresultado2[t]);
+				poliresultado2[t] = coeficientes[t] *(coeficientes2[t]);
+
 			}
 
 		//}
@@ -72,8 +72,8 @@ void main()
 
 		for (int t = 0; t < numerocoeficientes; t++)
 		{
-			poliresultado2[t] = coeficientes[t] / coeficientes2[t];
-			printf("%d \n", &poliresultado2[t]);
+			poliresultado2[t] = coeficientes[t] / (coeficientes2[t]);
+
 		}
 
 	}
