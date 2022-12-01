@@ -15,7 +15,7 @@ void main()
 	printf("1.- Resolver\n2.- Multiplicar\n3.- Dividir");
 	printf("\nQue desea hacer?: ");
 	scanf_s("%i",&opcion);
-	printf("Numero de coeficientes: ");
+	printf("Numero de coeficientes: "); //primer polinomio 
 	scanf_s("%i", &numerocoeficientes);
 	
 	for (i = 0; i < numerocoeficientes; i++)
@@ -38,12 +38,20 @@ void main()
 	if (opcion == 2)
 	{
 		printf("Multiplicacion de polinomios");
-		printf("Numero de coeficientes del segundo polinomio: ");
+		printf("Numero de coeficientes del segundo polinomio: "); //segundo polinomio 
 		scanf_s("%i", &numerocoef2);
 		for (i = 0; i < numerocoef2; i++)
 		{
 			printf("Coeficiente %i: ", i);
 			scanf_s("%i", &coeficientes2[i]);
+		}
+		float poliresultado = 0;
+		for (int t=0;t<numerocoef2;t++)
+		{
+			for (i=0;i<numerocoeficientes;i++)
+			{
+				poliresultado = poliresultado + (coeficientes[i]) * (coeficientes2[t]);
+			}
 		}
 
 	}
