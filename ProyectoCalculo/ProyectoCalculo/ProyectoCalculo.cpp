@@ -10,6 +10,8 @@ void main()
 	int coeficientes2[20];
 	int x;
 	float poliresultado;
+	float poliresultado2[50];
+	int poliresultado3[50];
 	int opcion,i;
 
 	printf("1.- Resolver\n2.- Multiplicar\n3.- Dividir");
@@ -37,7 +39,28 @@ void main()
 	}
 	if (opcion == 2)
 	{
-		printf("Multiplicacion de polinomios");
+		printf("Multiplicacion de polinomios\n");
+		printf("Numero de coeficientes del segundo polinomio: "); //segundo polinomio 
+		scanf_s("%i", &numerocoef2);
+		for (i = 0; i < numerocoef2; i++)
+		{
+			printf("Coeficiente %i: ", i);
+			scanf_s("%i",&coeficientes2[i]);
+		}
+		
+		//for (int t=0;t<numerocoef2;t++)
+		//{
+			for (int t=0;t<numerocoeficientes;t++)
+			{
+				poliresultado2[t] = coeficientes[t] *(coeficientes2[t]);
+				printf("\n%f", &poliresultado2[t]);
+			}
+		//}
+
+	}
+	if (opcion == 3)
+	{
+		printf("Division de polinomios\n");
 		printf("Numero de coeficientes del segundo polinomio: "); //segundo polinomio 
 		scanf_s("%i", &numerocoef2);
 		for (i = 0; i < numerocoef2; i++)
@@ -45,20 +68,12 @@ void main()
 			printf("Coeficiente %i: ", i);
 			scanf_s("%i", &coeficientes2[i]);
 		}
-		float poliresultado = 0;
-		for (int t=0;t<numerocoef2;t++)
-		{
-			for (i=0;i<numerocoeficientes;i++)
-			{
-				poliresultado = poliresultado + (coeficientes[i]) * (coeficientes2[t]);
-			}
-		}
 
-	}
-	if (opcion == 3)
-	{
-		printf("Division de polinomios");
-		printf("\nEscribe el primer polinomio");
+		for (int t = 0; t < numerocoeficientes; t++)
+		{
+			poliresultado2[t] = coeficientes[t] / (coeficientes2[t]);
+			printf("\n%f", &poliresultado2[t]);
+		}
 
 	}
 
