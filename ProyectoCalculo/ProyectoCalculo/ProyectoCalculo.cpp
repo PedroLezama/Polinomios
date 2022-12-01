@@ -5,8 +5,9 @@ void main()
 {
 	double polinomio1[50];
 	double polinomio2[50];
-	int numerocoeficientes;
-	int coeficientes[10];
+	int numerocoeficientes,numerocoef2;
+	int coeficientes[20];
+	int coeficientes2[20];
 	int x;
 	float poliresultado;
 	int opcion,i;
@@ -21,7 +22,6 @@ void main()
 	{
 		printf("Coeficiente %i: ", i);
 		scanf_s("%i", &coeficientes[i]);
-		
 	}
 
 	if (opcion == 1) //calcular con x
@@ -38,7 +38,13 @@ void main()
 	if (opcion == 2)
 	{
 		printf("Multiplicacion de polinomios");
-		printf("\nEscribe el primer polinomio");
+		printf("Numero de coeficientes del segundo polinomio: ");
+		scanf_s("%i", &numerocoef2);
+		for (i = 0; i < numerocoef2; i++)
+		{
+			printf("Coeficiente %i: ", i);
+			scanf_s("%i", &coeficientes2[i]);
+		}
 
 	}
 	if (opcion == 3)
